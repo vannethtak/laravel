@@ -11,14 +11,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // $middleware->append(App\Http\Middleware\Localization::class);
-        $middleware->alias([
-            'sidebar' => \App\Http\Middleware\Sidebar::class,
-        ]);
-        $middleware->web(append: [
-            \App\Http\Middleware\Localization::class,
-            // 'sidebar' => \App\Http\Middleware\Sidebar::class,
-        ]);
+        //
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
